@@ -1,0 +1,7 @@
+f = open('proceedings.txt')
+text = f.read()
+import re
+regularka = '[References]\s*(\W[0-9]+\W)\s*(\D+\.)'
+a = re.findall(regularka, text)
+print(a)
+f.close()
